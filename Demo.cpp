@@ -41,13 +41,14 @@ int main() {
     while(team_A.stillAlive() > 0 && team_B.stillAlive() > 0){
         team_A.attack(&team_B);
         team_B.attack(&team_A);
+        cout<< "------------------- team a"<<endl;
         team_A.print();
+        cout<< "------------------- team b"<<endl;
         team_B.print();
     }
 
     if (team_A.stillAlive() > 0) cout << "winner is team_A" << endl;
     else cout << "winner is team_B" << endl;
-
     return 0; // no memory issues. Team should free the memory of its members. both a and b teams are on the stack.
 
 }

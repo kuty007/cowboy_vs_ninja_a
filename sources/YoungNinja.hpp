@@ -11,7 +11,7 @@ namespace ariel {
 
     class YoungNinja: public Ninja {
     public:
-        YoungNinja(const string &name, const Point &location, int speed = 14, int health_points = 100);
+        YoungNinja(const string &name, const Point &location);
     };
 
 } // ariel

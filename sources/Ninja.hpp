@@ -9,12 +9,13 @@
 
 namespace ariel {
     class Ninja : public Character {
-    private:
-        int speed;
-    protected:
-        int getSpeed() const;
+
 
     public:
+        int speed;
+
+        int getSpeed() const;
+
         Ninja(const string &name, const Point &location);
 
         void move(const Character *other);
@@ -22,6 +23,9 @@ namespace ariel {
         void slash(Character *other);
 
         string print() const override;
+
+        ~Ninja() override = default;
+        void attack(Character* other) override;
     };
 
 

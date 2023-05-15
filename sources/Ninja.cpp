@@ -7,21 +7,30 @@
 namespace ariel {
 
     void Ninja::move(const Character *other) {
+
     }
 
     void Ninja::slash(Character *other) {
 
     }
 
+
     int Ninja::getSpeed() const {
-        return speed;
+        return this->speed;
+
     }
 
     string Ninja::print() const {
-        return std::string();
+
+        return "";
     }
 
+
     Ninja::Ninja(const string &name, const Point &location) : Character(name, location, 100) {
-        this->speed = 2;
+
+    }
+
+    void Ninja::attack(Character *other) {
+
     }
 } // ariel

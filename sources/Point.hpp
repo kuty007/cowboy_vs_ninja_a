@@ -4,7 +4,9 @@
 
 #ifndef COWBOY_VS_NINJA_A_POINT_HPP
 #define COWBOY_VS_NINJA_A_POINT_HPP
+#include <string>
 
+using namespace std;
 namespace ariel {
 
     class Point {
@@ -13,10 +15,11 @@ namespace ariel {
         double y_value;
     public:
          double distance(const Point& other) const;
-         void print() const;
+         string print() const;
          Point(double x_v, double y_v);
          Point();
          Point moveTowards(const Point& other, double dist) const;
+            Point moveTowards(const Point& point1 ,const Point& point2 ,double dist) const;
 
     };
 

@@ -6,7 +6,7 @@
 
 namespace ariel {
     Character *Team::getLeader() const {
-        return nullptr;
+        return leader;
     }
 
     void Team::add(Character *character) {
@@ -15,18 +15,37 @@ namespace ariel {
 
     void Team::attack(Team *other) {
 
+
     }
 
+
     void Team::print() {
+
 
     }
 
     int Team::stillAlive() {
-        return 0;
+          return 0;
+
     }
+
     Team::Team(Character *leader) {
-        this->leader = leader;
+
     }
+
+    Team::~Team() {
+
+    }
+
+    bool Team::compare(Character *a, Character *b) {
+           return false;
+
+    }
+
+    void Team::sortVector(vector<Character *> &characters) {
+
+    }
+
 
 //    Team::~Team() {
 //

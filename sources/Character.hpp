@@ -12,6 +12,8 @@
 #include <sstream>
 #include <stdexcept>
 #include <cassert>
+#include <vector>
+
 using namespace std;
 
 namespace ariel {
@@ -22,17 +24,41 @@ namespace ariel {
         int health_points;
         std::string name;
         bool alive;
-        Character(const std::string &name, const Point &location, int health_points );
+        bool belong_to_team;
+        bool is_cowboy;
 
 
-//    public:
+        Character(const std::string &name, const Point &location, int health_points);
+
         const Point &getLocation() const;
+
+        bool getBelongToTeam() const;
+
+        void setBelongToTeam(bool belongToTeam);
+
         bool isAlive() const;
+
         double distance(const Character &other) const;
+
         void hit(int damage);
+
         const std::string &getName() const;
-        virtual string print() const = 0 ;
+
+        virtual string print() const = 0;
+
         virtual ~Character() = default;
+
+        int getHealthPoints() const;
+
+        void setHealthPoints(int healthPoints);
+
+        void setLocation(const Point &location);
+        Character* getNearestCharacter(const std::vector<Character*>& characters) const;
+
+        virtual void attack(Character* other) = 0;
+        void setAlive(bool alive);
+
+
     };
 
 } // ariel

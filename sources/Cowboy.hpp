@@ -15,13 +15,19 @@ namespace ariel {
         int ammo;
     public:
         Cowboy(const std::string &name, const Point &location);
+
         // shoot get a pointer to a Character and hit him with 10 damage
         void shoot(Character *enemy);
 
         void reload();
-        string print() const override;
 
-        ~Cowboy() = default;
+        string print() const override;
+        int getAmmo() const;
+
+        ~Cowboy() override = default;
+//        Character* getNearestCharacter(const std::vector<Character>& characters);
+        void attack(Character* other) override;
+
 
 
     }; // ariel

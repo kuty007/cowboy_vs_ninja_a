@@ -4,7 +4,7 @@
 
 #include "OldNinja.hpp"
 namespace ariel {
-        OldNinja::OldNinja(const string &name, const Point &location) : Ninja(<#initializer#>, <#initializer#>, 0, name,
+        OldNinja::OldNinja(const string &name, const Point &location) : Ninja(name,
                                                                               location) {
             this->health_points = 150;
             this->speed = 8;

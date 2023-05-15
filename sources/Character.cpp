@@ -3,6 +3,7 @@
 //
 
 #include "Character.hpp"
+#include <cmath>
 
 namespace ariel {
 
@@ -10,40 +11,64 @@ namespace ariel {
         return alive;
     }
 
+
     const Point &Character::getLocation() const {
         return location;
     }
 
     double Character::distance(const Character &other) const {
-        return this->location.distance(other.location);
+        return 0;
     }
 
-    void Character::hit(int damage ) {
-        this->health_points -= damage;
-        if (this->health_points <= 0) {
-            this->health_points = 0;
-            this->alive = false;
+    void Character::hit(int damage) {
 
-        }
+
+
     }
+
     const std::string &Character::getName() const {
-        return name;
+        return this->name;
     }
 
     Character::Character(const string &name, const Point &location, int health_points) {
+
+
+    }
+
+    int Character::getHealthPoints() const {
+        return this->health_points;
+    }
+
+    void Character::setHealthPoints(int healthPoints) {
+        this->health_points = healthPoints;
+
+    }
+
+    void Character::setLocation(const Point &location) {
         this->location = location;
-        this->health_points = health_points;
-        this->name = name;
-        this->alive = true;
+
+    }
+
+    void Character::setBelongToTeam(bool belongToTeam) {
+        this->belong_to_team = belongToTeam;
+
+    }
+
+    bool Character::getBelongToTeam() const {
+        return this->belong_to_team;
+    }
+
+    Character *Character::getNearestCharacter(const vector<Character *> &characters) const {
+        Character *nearestCharacter = nullptr;
+
+
+        return nearestCharacter;
+    }
+
+    void Character::setAlive(bool alive) {
+        this->alive = alive;
 
     }
 
 
-//    Character::Character(const Point &location, int healthPoints, const std::string &name){
-//        this->location = location;
-//        this->health_points = healthPoints;
-//        this->name = name;
-//        this->alive = true;
-//
-//    }
 } // ariel

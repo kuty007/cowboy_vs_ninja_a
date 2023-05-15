@@ -5,35 +5,43 @@
 #ifndef COWBOY_VS_NINJA_A_TEAM_HPP
 #define COWBOY_VS_NINJA_A_TEAM_HPP
 
+#include <algorithm>
 #include <vector>
 #include "OldNinja.hpp"
 #include "YoungNinja.hpp"
 #include "TrainedNinja.hpp"
 #include "Cowboy.hpp"
 
-
 namespace ariel {
 
     class Team {
-    protected:
-        int Maxsize;
-        int capcity;
-
+//    protected:
+//
+//        int capcity;
+//        Character *leader;
+//        std::vector<Character *> team;
+    public:
+        int capacity;
         Character *leader;
         std::vector<Character *> team;
-    public:
+
         Character *getLeader() const;
 
         Team(Character *leader);
 
-        void add(Character *character);
+        virtual void add(Character *character);
 
-        void attack(Team *other);
+        virtual void attack(Team *other);
+
+        static bool compare(Character *a, Character *b);
 
         void print();
 
+        static void sortVector(std::vector<Character *> &characters);
+
         int stillAlive();
-//        ~Team();
+
+        ~Team();
     };
 
 } // ariel

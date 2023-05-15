@@ -6,8 +6,8 @@
 
 namespace ariel {
 
-    TrainedNinja::TrainedNinja(const string &name, const Point &location) : Ninja(<#initializer#>, <#initializer#>, 0,
-                                                                                  name, location) {
+    TrainedNinja::TrainedNinja(const string &name, const Point &location) : Ninja(
+            name, location) {
         this->health_points = 120;
         this->speed = 12;
     }

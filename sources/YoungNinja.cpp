@@ -6,9 +6,9 @@
 
 namespace ariel {
 
-    YoungNinja::YoungNinja(const string &name, const Point &location, int speed, int health_points) : Ninja(
-            <#initializer#>, <#initializer#>, 0, name, location) {
-        this->health_points = health_points;
-        this->speed = speed;
+    YoungNinja::YoungNinja(const string &name, const Point &location) : Ninja(
+             name, location) {
+        this->health_points = 100;
+        this->speed = 14;
     }
 } // ariel
